@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 const url = "https://course-api.com/react-tours-project";
-import "./App.css";
+// import "./App.css";
 import Loading from "./components/Loading";
 import Tours from "./components/Tours";
 
@@ -33,18 +33,26 @@ function App() {
     }
     setInterval(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 4000);
   };
   useEffect(() => {
     fetchData();
   }, []);
 
   if (isloading) {
-    return <Loading />;
+    return (
+      <main>
+        <Loading />;
+      </main>
+    );
   }
 
   if (isError) {
-    return <h1>There was an Error in loading...</h1>;
+    return (
+      <main>
+        <h1>There was an Error in loading...</h1>
+      </main>
+    );
   }
 
   if (tours.length === 0) {
@@ -52,7 +60,7 @@ function App() {
       <main>
         <div className="title">
           <h2>No Tours Left</h2>
-          <button type="button" onClick={() => fetchData()}>
+          <button type="button" className="btn" onClick={() => fetchData()} style={{margin:'1rem'}}>
             Refresh
           </button>
         </div>
