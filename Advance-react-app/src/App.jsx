@@ -11,6 +11,9 @@ import ConditionalRender from './component/useEffectExample/ConditionalRender'
 import MultipleReturns from './component/conditionalRendering/MultipleReturns'
 import ToggleChallenge from './component/conditionalRendering/ToggleChallenge'
 import LoginChallenge from './component/conditionalRendering/LoginChallenge'
+import ControlledInputs from './component/forms/ControlledInputs'
+import ControlledInputChallenge from './component/forms/ControlledInputChallenge'
+import MultipleInputs from './component/forms/MultipleInputs'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,7 +31,10 @@ function App() {
       {/* <MultipleReturns/>  */}
       {/* Multiple fetching example */}
       {/* <ToggleChallenge/> */}
-      <LoginChallenge/>
+      {/* <LoginChallenge/> */}
+      {/* <ControlledInputs/> */}
+      {/* <ControlledInputChallenge/> */}
+      <MultipleInputs/>
 
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
